@@ -34,7 +34,7 @@ bot.on('message', message => {
             message.member.setNickname(message.content);
             message.member.addRole('440658070918529024'); //Mets le role normal                                                                                                                                                                                                       
             message.member.removeRole('440617324492488705'); //Enleve le role invité
-            message.delete();             
+            //message.delete();             
             } 
         })                                                                                                                                                 
         }
