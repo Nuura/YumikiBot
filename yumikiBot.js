@@ -37,7 +37,7 @@ bot.on('message', message => {
    }                                                                                                                                                                                                                                                                                  
 })                                                                                                                                                                                                                                                                                    
 
-bot.on('message', message => {
+/*bot.on('message', message => {
    if(message.channel.name === "regles") {
        message.channel.send("Bonjour ! Je suis Yumiki ! :fox:");
        message.channel.send("-----------------------------");
@@ -55,4 +55,4 @@ bot.on('message', message => {
        message.channel.send("-----------------------------");
        message.channel.send("Bon jeu a tous ! :heart: :fox:");
    }
-});
+});*/
