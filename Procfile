@@ -1,1 +1,1 @@
-worker node: yumikiBot
+worker node: yumikiBot.jsd
