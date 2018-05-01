@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+var state = 0
 
 bot.on('ready', function () {
   console.log("Je suis connecté !")
@@ -26,19 +27,28 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', message => {
     if(message.channel.name === "regles")
         {
-        if(message.content === "Ainsoph" && !message.member.roles.has('440658070918529024')) {
+        if(message.content === "Ainsoph" && !message.member.roles.has('440658070918529024') && state === 0) {
+          state = 1; 
           message.channel.send("Bien ! Yumiki a également besoin de ton pseudo en jeu ! :fox: Je t'écoute");
-          const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-          collector.on('collect', message => {
-            if (message.content !== "") {
-            message.member.setNickname(message.content);
-            message.member.addRole('440658070918529024'); //Mets le role normal                                                                                                                                                                                                       
-            message.member.removeRole('440617324492488705'); //Enleve le role invité
-            //message.delete();             
-            } 
+          setNickname();
+        }
+                     
         })                                                                                                                                                 
         }
           else
             message.delete();
    }
 });
+
+function setNickname(message mes)
+{
+  if(mes.content !== "")
+  {          
+    mes.member.setNickname(message.content);
+    mes.member.addRole('440658070918529024'); //Mets le role normal                                                                                                                                                                                                       
+    mes.member.removeRole('440617324492488705'); //Enleve le role invité
+    state = 0;
+    message.delete();             
+
+  }
+}
