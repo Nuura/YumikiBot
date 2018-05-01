@@ -5,6 +5,8 @@ var arrayMessage = []
 
 bot.on('ready', function () {
     console.log("Je suis connecté !")
+	bot.user.setActivity({game: {name: "Manger des Sushis", type: 0}});
+
 })
 
 bot.login('NDQwNjIwOTgxMTQ1NTY3MjQy.DckbqQ.rueYLHeLf6YxQoNouin2ZEfl0OM');
@@ -75,4 +77,62 @@ bot.on('message', message => {
 		message.delete();
 	}
     }
+
+    if(message.channel.name === "gvg-launch" || message.channel.name === "crash-test-code")
+    {
+	if(message.content === "!gvg")
+	{
+	    message.delete();
+	    var d = new Date();
+	    const h = d.getHours();
+	    const m = d.getMinutes(); 
+	    message.channel.send("Yumiki annonce qu'une GVG a été lancée à "+h+"h"+m+" ! <@&440948591931031552>");
+	}
+    }
+    
+    if(message.channel.name === "gvo-launch" || message.channel.name === "crash-test-code")
+    {
+        if(message.content === "!gvo")
+        {
+            message.delete();
+            var d = new Date();
+            const h = d.getHours();
+            const m = d.getMinutes();
+            message.channel.send("Yumiki annonce qu'une GVO a été lancée à "+h+"h"+m+" ! <@&440658070918529024>");
+        }
+    }
+
+    if(message.channel.name === "call-attackers" || message.channel.name === "crash-test-code")
+    {
+        if(message.content.split(' ')[0]  === "!attack")
+        {
+	    message.channel.send("Yumiki vous rappelle de ne pas oublier d'attaquer en GVG ! :fox: <@&440948591931031552> ");
+	    
+/*	    var command = message.content.split(' '); //Command == a tout les noms 
+	    for(i = 1; command[i].length > i; i++) 
+	    {
+		var user = bot.users.get(bot).id;
+
+		if(user)
+		{
+		    arrayMessage["id-"+user.id]['displayName-'+user.displayName] = 1
+		    message.channel.send("<@&"+user.id+">" +"Yumiki te rappelle d'attaquer ! YukiCompteur : "+ arrayMessage["id-"+user.id]['displayName-'+user.displayName]+" :fox:");
+		    arrayMessage["id-"+user.id]['displayName-'+user.displayName] += 1
+		}
+            }*/
+	}
+	else
+	    message.delete();
+    }
+   
+    if(message.channel.name === "command-chan" || message.channel.name === "crash-test-code")
+    {
+	if(message.content === "!lista")
+	{
+	    let members = message.guild.roles.get('440948591931031552').members;
+	    message.channel.send("Yumiki a trouver la liste des joueurs en attaque ! :fox:");
+	    message.channel.send(members.map(m=>m.displayName).join('\n'));
+	}
+    }
+    
 });
