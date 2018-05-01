@@ -30,17 +30,19 @@ bot.on('message', message => {
         {
             i = 6;
             while (message.content.toLowerCase() === "oui" || message.content.toLowerCase() === "non")
-            if(message.content.toLowerCase() === "oui") {
-                message.member.removeRole('440617324492488705'); //Enleve le role invité                                                                                                                             
-                message.member.addRole('440658070918529024'); //Add role Invocateur                                                                                                                                  
-                message.channel.bulkDelete(i);
-                message.author.send("Vous avez bien été admis sur le serveur de mon créateur ! Yumiki est heureuse de te compter parmis nous! :fox:")
-            }
-            else if (message.content.toLowerCase() === "non") {
-                message.member.removeRole('440617324492488705'); //Enleve le role invité                                                                                                                             
-                message.member.addRole('440664569019629619'); //Add role invocateur étranger                                                                                                                         
-                message.channel.bulkDelete(i);
-                message.author.send("Vous avez bien été admis sur le serveur de mon créateur ! Yumiki est heureuse de te compter parmis nous ! :fox:")
+            {
+                if(message.content.toLowerCase() === "oui") {
+                    message.member.removeRole('440617324492488705'); //Enleve le role invité                                                                                                                             
+                    message.member.addRole('440658070918529024'); //Add role Invocateur                                                                                                                                  
+                    message.channel.bulkDelete(i);
+                    message.author.send("Vous avez bien été admis sur le serveur de mon créateur ! Yumiki est heureuse de te compter parmis nous! :fox:")
+                }
+                else if (message.content.toLowerCase() === "non") {
+                    message.member.removeRole('440617324492488705'); //Enleve le role invité                                                                                                                             
+                    message.member.addRole('440664569019629619'); //Add role invocateur étranger                                                                                                                         
+                    message.channel.bulkDelete(i);
+                    message.author.send("Vous avez bien été admis sur le serveur de mon créateur ! Yumiki est heureuse de te compter parmis nous ! :fox:")
+                }
             }
             state = 0;
         }
