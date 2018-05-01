@@ -28,9 +28,10 @@ bot.on('message', message => {
         }
         else if(state === 2 && message.member.roles.has('440617324492488705'))
         {
-            i = 6;
+            i = 5;
             while (message.content.toLowerCase() !== "oui" || message.content.toLowerCase() !== "non")
             {
+		i++;
                 if(message.content.toLowerCase() === "oui") {
                     message.member.removeRole('440617324492488705'); //Enleve le role invité                                                                                                                             
                     message.member.addRole('440658070918529024'); //Add role Invocateur                                                                                                                                  
@@ -43,6 +44,8 @@ bot.on('message', message => {
                     message.channel.bulkDelete(i);
                     message.author.send("Vous avez bien été admis sur le serveur de mon créateur ! Yumiki est heureuse de te compter parmis nous ! :fox:")
                 }
+		else
+		    message.author.send("Yumiki n'a pas compris... Peux-tu me répeter ton choix ? Oui ou Non ? :fox:");
             }
             state = 0;
         }
