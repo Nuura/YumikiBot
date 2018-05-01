@@ -44,6 +44,9 @@ bot.on('message', message => {
             state = 0;
         }
       else
-        message.delete();
+      {
+          if(!message.member.roles.has('440648066618359819'))
+            message.delete();
+      }
     }
 });
