@@ -1,1 +1,1 @@
-worker node: YumikiBot
+worker node: yumikiBot
