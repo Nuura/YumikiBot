@@ -15,7 +15,7 @@ bot.on('guildMemberAdd', member => {
 
 });
 
-/*bot.on('message', message => {
+bot.on('message', message => {
     message.channel.send("Bonjour ! Je suis Yumiki ! :fox:");
     message.channel.send("-----------------------------");
     message.channel.send("Je suis un bot, qui sera amélioré au fur et a mesure du temps ! Pour le moment je m'occupe de la vérification !");
@@ -33,9 +33,9 @@ bot.on('guildMemberAdd', member => {
     
     message.channel.send("-----------------------------");
     message.channel.send("Bon jeu a tous ! :heart: :fox:");
-});*/
+});
 
-bot.on('message', message => {
+/*bot.on('message', message => {
     if(message.channel.name === "regles")
     {
         if(message.content.toLowerCase() === "ainsoph" && !message.member.roles.has('440658070918529024') && state === 0) {
@@ -76,3 +76,4 @@ bot.on('message', message => {
 	}
     }
 });
+*/
