@@ -32,6 +32,13 @@ bot.on('message', message => {
           message.channel.send("Bien ! Yumiki a également besoin de ton pseudo en jeu ! :fox: Je t'écoute");
           setNickname();
         }
+          elseif(state === 1)
+          {
+           message.member.setNickname(message.content);
+           message.member.addRole('440658070918529024'); //Mets le role normal                                                                                                                                                                                                       
+           message.member.removeRole('440617324492488705'); //Enleve le role invité
+           state = 0;
+          }
                      
         })                                                                                                                                                 
         }
@@ -40,15 +47,3 @@ bot.on('message', message => {
    }
 });
 
-function setNickname(message mes)
-{
-  if(mes.content !== "")
-  {          
-    mes.member.setNickname(message.content);
-    mes.member.addRole('440658070918529024'); //Mets le role normal                                                                                                                                                                                                       
-    mes.member.removeRole('440617324492488705'); //Enleve le role invité
-    state = 0;
-    message.delete();             
-
-  }
-}
