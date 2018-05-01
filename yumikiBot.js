@@ -6,20 +6,7 @@ bot.on('ready', function () {
   console.log("Je suis connecté !")
 })
 
-bot.login('NDQwNjIwOTgxMTQ1NTY3MjQy.DckbqQ.rueYLHeLf6YxQoNouin2ZEfl0OM');
-//bot.on('message', message => {                                                                                                                                                                                                                                                      
-//  if (message.content === 'ping') {                                                                                                                                                                                                                                                 
-//    message.reply('pong !')                                                                                                                                                                                                                                                         
-//  }                                                                                                                                                                                                                                                                                 
-//})                                                                                                                                                                                                                                                                                  
-
-//bot.on('guildMemberAdd', member => {                                                                                                                                                                                                                                                
-//  return channel.send('Bienvenue sur mon serveur ' + member.displayName)                                                                                                                                                                                                            
-// }).catch(console.error)                                                                                                                                                                                                                                                            
-// On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)                                                                                                                                                                                              
-//})                                                                                                                                                                                                                                                                                 \
-                                                                                                                                                                                                                                                                                      
-
+bot.login('NDQwNjIwOTgxMTQ1NTY3MjQy.DckbqQ.rueYLHeLf6YxQoNouin2ZEfl0OM');                                                                                                                                                                                                                             
 bot.on('guildMemberAdd', member => {
     member.addRole('440617324492488705').then(console.log).catch(console.error);
 });
