@@ -22,7 +22,7 @@ bot.login('NDQwNjIwOTgxMTQ1NTY3MjQy.DckbqQ.rueYLHeLf6YxQoNouin2ZEfl0OM')
 
 bot.on('guildMemberAdd', member => {
     member.addRole('440617324492488705').then(console.log).catch(console.error);
-      message.channel.send("Bonjour ! Je suis Yumiki ! :fox:");
+      message.channel.send("Bonjour" + member.displayName + " ! Je suis Yumiki ! :fox:");
        message.channel.send("-----------------------------");
        message.channel.send("Je suis un bot, qui sera amélioré au fur et a mesure du temps ! Pour le moment je m'occupe de la vérification !");
        message.channel.send("Afin d'entrer dans ce serveur, il y a quelques règles a respecter ! A savoir :");
@@ -50,7 +50,7 @@ bot.on('message', message => {
         else                                                                                                                                                                                                                                                                          
             message.delete();                                                                                                                                                                                                                                                         
    }                                                                                                                                                                                                                                                                                  
-})                                                                                                                                                                                                                                                                                    
+});                                                                                                                                                                                                                                                                                 
 
 /*bot.on('message', message => {
    if(message.channel.name === "regles") {
