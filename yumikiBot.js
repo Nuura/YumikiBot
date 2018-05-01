@@ -28,13 +28,15 @@ bot.on('message', message => {
         {
         if(message.content === "Ainsoph" && !message.member.roles.has('440658070918529024')) {
           message.channel.send("Bien ! Yumiki a également besoin de ton pseudo en jeu ! :fox: Je t'écoute");
-         bot.on('message', message => {
-           message.member.setNickname(message.content);
-           message.member.addRole('440658070918529024'); //Mets le role normal                                                                                                                                                                                                       
-           message.member.removeRole('440617324492488705'); //Enleve le role invité
-           message.delete();
-         });
-          //Check si l'user a le role Invoc {                                                                                                                                                    
+          const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+          collector.on('collect', message => {
+            if (message.content !== "") {
+            message.member.setNickname(message.content);
+            message.member.addRole('440658070918529024'); //Mets le role normal                                                                                                                                                                                                       
+            message.member.removeRole('440617324492488705'); //Enleve le role invité
+            message.delete();             
+            } 
+        })                                                                                                                                                 
         }
           else
             message.delete();
