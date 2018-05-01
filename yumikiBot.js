@@ -75,4 +75,4 @@ bot.on('message', message => {
 		message.delete();
 	}
     }
-});*/
+});
