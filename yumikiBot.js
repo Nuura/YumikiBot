@@ -5,7 +5,7 @@ bot.on('ready', function () {
   console.log("Je suis connecté !")
 })
 
-bot.login('NDQwNjIwOTgxMTQ1NTY3MjQy.DckbqQ.rueYLHeLf6YxQoNouin2ZEfl0OM');
+bot.login('');
 //bot.on('message', message => {                                                                                                                                                                                                                                                      
 //  if (message.content === 'ping') {                                                                                                                                                                                                                                                 
 //    message.reply('pong !')                                                                                                                                                                                                                                                         
