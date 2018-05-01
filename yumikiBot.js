@@ -5,7 +5,7 @@ var arrayMessage = []
 
 bot.on('ready', function () {
     console.log("Je suis connecté !")
-	bot.user.setActivity({game: {name: "Manger des Sushis", type: 0}});
+    bot.user.setPresence({status: 'online', game: { name : 'Manger des Sushis'}});
 
 })
 
