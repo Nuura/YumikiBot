@@ -82,7 +82,7 @@ bot.on('message', message => {
     {
 	if(message.content === "!gvg")
 	{
-	    message.delete();
+//	    message.delete();
 	    var d = new Date();
 	    const h = d.getHours();
 	    const m = d.getMinutes(); 
@@ -94,7 +94,7 @@ bot.on('message', message => {
     {
         if(message.content === "!gvo")
         {
-            message.delete();
+  //          message.delete();
             var d = new Date();
             const h = d.getHours();
             const m = d.getMinutes();
