@@ -98,7 +98,7 @@ bot.on('message', message => {
             var d = new Date();
             const h = d.getHours();
             const m = d.getMinutes();
-            message.channel.send("Yumiki annonce qu'une GVO a été lancée à "+h+"h"+m+" ! <@&440658070918529024>");
+            message.channel.send("Yumiki annonce qu'une GVO a été lancée à "+h+2 +"h"+m+" ! <@&440658070918529024>");
         }
     }
 
