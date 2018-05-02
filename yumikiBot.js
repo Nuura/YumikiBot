@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+//const config = require('./data.json');
 var state = 0
 var arrayMessage = []
 
@@ -9,8 +10,7 @@ bot.on('ready', function () {
 
 })
 
-bot.login('NDQwNjIwOTgxMTQ1NTY3MjQy.DckbqQ.rueYLHeLf6YxQoNouin2ZEfl0OM');
-
+bot.login(ENV['token']);
 bot.on('guildMemberAdd', member => {
     member.addRole('440617324492488705').then(console.log).catch(console.error);
     arrayMessage["id-"+member.id] = 5;
