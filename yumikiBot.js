@@ -78,7 +78,7 @@ bot.on('message', message => {
 	}
     }
 
-    if(message.channel.name === "gvg-launch" || message.channel.name === "crash-test-code")
+    else if(message.channel.name === "gvg-launch" || message.channel.name === "crash-test-code")
     {
 	if(message.content === "!gvg")
 	{
@@ -90,7 +90,7 @@ bot.on('message', message => {
 	}
     }
     
-    if(message.channel.name === "gvo-launch" || message.channel.name === "crash-test-code")
+    else if(message.channel.name === "gvo-launch" || message.channel.name === "crash-test-code")
     {
         if(message.content === "!gvo")
         {
@@ -102,7 +102,7 @@ bot.on('message', message => {
         }
     }
 
-    if(message.channel.name === "call-attackers" || message.channel.name === "crash-test-code")
+    else if(message.channel.name === "call-attackers" || message.channel.name === "crash-test-code")
     {
         if(message.content.split(' ')[0]  === "!attack")
         {
@@ -125,7 +125,7 @@ bot.on('message', message => {
 	    message.delete();
     }
    
-    if(message.channel.name === "command-chan" || message.channel.name === "crash-test-code")
+    else if(message.channel.name === "command-chan" || message.channel.name === "crash-test-code")
     {
 	if(message.content === "!lista")
 	{
