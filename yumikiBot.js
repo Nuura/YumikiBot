@@ -10,7 +10,7 @@ bot.on('ready', function () {
 
 })
 
-bot.login(ENV['token']);
+bot.login(process.env.token);
 bot.on('guildMemberAdd', member => {
     member.addRole('440617324492488705').then(console.log).catch(console.error);
     arrayMessage["id-"+member.id] = 5;
